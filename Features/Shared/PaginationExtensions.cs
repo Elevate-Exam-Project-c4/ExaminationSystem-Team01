@@ -1,4 +1,6 @@
-﻿namespace exam_system.Features.Shared
+﻿using Microsoft.EntityFrameworkCore;
+
+namespace exam_system.Features.Shared
 {
     public static class PaginationExtensions
     {
