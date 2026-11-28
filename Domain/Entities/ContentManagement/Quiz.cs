@@ -15,7 +15,7 @@ namespace exam_system.Domain.Entities.ContentManagement
         public DateTime EndDate { get; set; }
 
         public int DurationMinutes { get; set; }
-        public decimal PassScore { get; set; } = 60m;
+        public decimal PassScore { get; set; }
         public int? MaxAttempts { get; set; }
 
         public QuizStatus Status { get; set; } = QuizStatus.Draft;

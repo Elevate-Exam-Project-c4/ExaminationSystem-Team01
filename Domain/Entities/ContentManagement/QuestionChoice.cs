@@ -2,7 +2,7 @@
 
 namespace exam_system.Domain.Entities.ContentManagement
 {
-    public class QuestionChoice 
+    public class QuestionChoice: SoftDeletableEntity
     {
         public Guid QuestionId { get; set; }
         public Guid ChoiceId { get; set; }

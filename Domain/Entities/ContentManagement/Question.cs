@@ -11,5 +11,6 @@ namespace exam_system.Domain.Entities.ContentManagement
         public ICollection<QuestionChoice> QuestionChoices { get; set; }= [];
 
         public ICollection<AttemptQuestion> AttemptQuestions { get; set; } = [];
+        public ICollection<QuizQuestion> QuizQuestions { get; set; } = [];
     }
 }

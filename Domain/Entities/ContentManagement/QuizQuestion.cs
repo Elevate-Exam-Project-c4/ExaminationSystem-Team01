@@ -1,6 +1,8 @@
-﻿namespace exam_system.Domain.Entities.ContentManagement
+﻿using exam_system.Domain.Common;
+
+namespace exam_system.Domain.Entities.ContentManagement
 {
-    public class QuizQuestion 
+    public class QuizQuestion: SoftDeletableEntity
     {
         public Guid QuizId { get; set; }
         public Guid QuestionId { get; set; }

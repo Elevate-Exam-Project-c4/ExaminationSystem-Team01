@@ -3,7 +3,7 @@
 namespace exam_system.Domain.Entities.Examination_Assessment
 {
     // TODO : Should Add AuditableEntity To Avoide Use ID In This Class 
-    public class AttemptAnswer 
+    public class AttemptAnswer: BaseEntity
     {
         public Guid AttemptId { get; set; }
         public Guid QuestionId { get; set; }

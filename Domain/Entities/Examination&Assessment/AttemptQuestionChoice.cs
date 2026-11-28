@@ -3,7 +3,7 @@ using exam_system.Domain.Entities.ContentManagement;
 
 namespace exam_system.Domain.Entities.Examination_Assessment
 {
-    public class AttemptQuestionChoice 
+    public class AttemptQuestionChoice: AuditableEntity
     {
         public Guid AttemptId { get; set; }
         public Guid QuestionId { get; set; }
