@@ -7,7 +7,6 @@
 
         public int OrderIndex { get; set; }
 
-        // Navigation Properties
         public Quiz Quiz { get; set; } = null!;
         public Question Question { get; set; } = null!;
     }

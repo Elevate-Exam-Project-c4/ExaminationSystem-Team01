@@ -1,8 +1,10 @@
-﻿using exam_system.Domain.Entities.Examination_Assessment;
+﻿using exam_system.Domain.Common;
+using exam_system.Domain.Entities.Examination_Assessment;
+using exam_system.Domain.Enums;
 
 namespace exam_system.Domain.Entities.ContentManagement
 {
-    public class Quiz 
+    public class Quiz : BaseEntity
     {
         public Guid DiplomaId { get; set; }
 
@@ -16,16 +18,13 @@ namespace exam_system.Domain.Entities.ContentManagement
         public decimal PassScore { get; set; } = 60m;
         public int? MaxAttempts { get; set; }
 
-        //public string Status { get; set; } = QuizStatuses.Draft; enum
+        public QuizStatus Status { get; set; } = QuizStatus.Draft;
         public DateTime? PublishedAt { get; set; }
 
-        // Navigation Properties
         public Diploma Diploma { get; set; } = null!;
 
-        public ICollection<QuizQuestion> QuizQuestions { get; set; }
-            = new List<QuizQuestion>();
+        public ICollection<QuizQuestion> QuizQuestions { get; set; } = [];
 
-        public ICollection<QuizAttempt> Attempts { get; set; }
-            = new List<QuizAttempt>();
+        public ICollection<QuizAttempt> Attempts { get; set; } = [];
     }
 }
