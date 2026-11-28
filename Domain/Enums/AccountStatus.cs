@@ -1,4 +1,4 @@
-﻿namespace exam_system.Common.Enums
+﻿namespace exam_system.Domain.Enums
 {
     public enum AccountStatus
     {

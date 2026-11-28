@@ -1,20 +1,15 @@
-﻿using exam_system.Domain.Entities.Examination_Assessment;
+﻿using exam_system.Domain.Common;
+using exam_system.Domain.Entities.Examination_Assessment;
 
 namespace exam_system.Domain.Entities.ContentManagement
 {
-    public class Question 
+    public class Question : BaseEntity
     {
         public string Text { get; set; } = string.Empty;
         public string? Explanation { get; set; }
 
-        // Navigation Properties
-        public ICollection<QuestionChoice> QuestionOptions { get; set; }
-            = new List<QuestionChoice>();
+        public ICollection<QuestionChoice> QuestionChoices { get; set; }= [];
 
-        public ICollection<QuizQuestion> QuizQuestions { get; set; }
-            = new List<QuizQuestion>();
-
-        public ICollection<AttemptQuestion> AttemptQuestions { get; set; }
-            = new List<AttemptQuestion>();
+        public ICollection<AttemptQuestion> AttemptQuestions { get; set; } = [];
     }
 }
